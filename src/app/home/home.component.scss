@@ -49,4 +49,24 @@ img{
 
 #jumborton-btn{
     text-align:center; 
+    transform: translateY(10px);
+}
+
+#welcome-title{
+    font-family:'Amiri', serif;
+    color: rgb(118, 9, 182);
+    text-shadow: 2px 1px 3px #330944;
+}
+
+.image-welcome{
+    border-radius: 50%;
+    margin-top: 15%;
+    margin-left: 5%;
+    width: 50%;
+    height: 50%;
+}
+
+.text-image-welcome{
+    font-family: 'Amiri', serif;
+    color: rgb(78, 228, 32); 
 }
