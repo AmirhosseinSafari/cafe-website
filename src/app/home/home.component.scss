@@ -67,6 +67,28 @@ img{
 }
 
 .text-image-welcome{
+    margin: auto;
     font-family: 'Amiri', serif;
-    color: rgb(78, 228, 32); 
+    color: rgb(61, 230, 10); 
+    text-shadow: 1px 1px 3px rgb(86, 204, 18);
+}
+
+#welcome-mokhaberat-logo{
+    margin: auto;
+    font-family: 'Amiri', serif;
+    color: rgb(54, 54, 206);
+    text-shadow: 1px 1px 3px #0000FF;
+    transform: translateY(5%);
+}
+
+#welcome-iranKhodro-logo{
+    margin: auto;
+    font-family: 'Amiri', serif;
+    color: rgb(66, 66, 241);
+    text-shadow: 1px 1px 3px rgb(67, 67, 187);
+    transform: translateX(3%);
+    padding: 0px;
+}
+.carousel-item{
+    height: 550px !important;
 }
