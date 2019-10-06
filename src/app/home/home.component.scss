@@ -14,7 +14,7 @@ img{
     text-align: center;
     font-family: 'Amiri', serif;
     font-size: 40px;
-    color: rgb(82, 63, 83);
+    color: rgb(93, 42, 97);
 }
 
 .title-caption-slider{
@@ -54,8 +54,9 @@ img{
 
 #welcome-title{
     font-family:'Amiri', serif;
-    color: rgb(118, 9, 182);
-    text-shadow: 2px 1px 3px #330944;
+    color: rgb(94, 20, 136);
+    text-shadow: 1px 1px 3px #330944;
+    margin-bottom: 2rem;
 }
 
 .image-welcome{
@@ -91,4 +92,93 @@ img{
 }
 .carousel-item{
     height: 550px !important;
+}
+
+.text-more-info{
+    text-align: center;
+    font-family: 'Amiri', serif;
+    color: aliceblue;
+    margin-top: 50px;
+    text-shadow: 2px 2px 3px rgb(67, 67, 75);
+    padding:0 5%;
+}
+
+#main-div-two-col{
+    background-image: url(https://www.oakbaybeachhotel.com/wp-content/uploads/2015/05/KatesCafe.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px;
+}
+
+.btn-two-col{
+    border: solid 2px rgb(44, 44, 214);
+    width: 30%;
+    height: 50px;
+    border-radius: 5px;
+    background: rgb(44, 44, 214);
+    font-family: 'Amiri', serif;
+}
+
+#btn-div-two-col{
+    margin: auto;
+    margin-bottom: 60px;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+#btn-div-two-col :hover{
+    background: #0000FF;
+    border: #0000FF;
+}
+
+.social{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.fab{
+    margin: 5%;
+}
+
+.fa-facebook{
+    color: #3b5998;
+}
+
+.fa-twitter{
+    color: #00aced;
+}
+
+.fa-google-plus-g{
+    color: #dd4b39;
+}
+
+.fa-instagram{
+    color:#517fa4;
+}
+
+.animation :hover{
+    transition-duration: .5s;
+    transform: scale(1.09);
+}
+
+footer{
+    background-color: #3f3f3f;
+    color: aliceblue;
+    padding-top: 2rem; 
+}
+
+hr.light{
+    width: 75%;
+    border-top: 1px solid aliceblue;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+hr.light-100{
+    width: 100%;
+    border-top: 1px solid aliceblue;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
