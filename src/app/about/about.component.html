@@ -1,1 +1,27 @@
-<p>about works!</p>
+<div class="container-fluid padding">
+    <div class="row padding" *ngIf="info.getCafeInfo">
+        <div class="col-6 cafe-info-card" *ngFor="let item of info.getCafeInfo">
+            <div class="card">
+                <img class="card-img-top" [src]="item.imgOfCafe" alt="image of cafe">
+                <div class="card-body">
+                    <h4 class="card-title name">{{item.name}}</h4>
+                    <h5 class="card-subtitle location">{{item.location}}</h5>
+                    <p class="card-text extraInfo">{{item.extraInformation}}</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!-- <div class="row">
+        <div class="col-12">
+          <ul class="list-group" *ngIf="info.getCafeInfo">
+            <li class="list-group-item" *ngFor="let item of info.getCafeInfo">
+                    <img class="card-img-top" [src]="item.imgOfCafe" alt="image of cafe">
+                    <h4 class="card-title">{{item.name}}</h4>
+                    <h5 class="card-subtitle">{{item.location}}</h5>
+                    <p class="card-text">{{item.extraInformation}}</p>
+            </li>
+          </ul>
+        </div>
+      </div> -->

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Vibes&display=swap');
+
+.cafe-info-card{
+    margin-top: 30px;
+}
+
+.cafe-info-card:hover{
+    transition-duration: .5s;
+    transform: scale(1.05);
+}
+
+.name{
+    color: blueviolet;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Vibes', cursive;
+    font-size: 70px; 
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgb(166, 226, 0);
+    margin: 0;
+}
+
+.location{
+    text-align: center;
+    font-family: 'Amiri', serif;
+    font-weight: 500;
+    color: rgb(190, 66, 190);
+    margin: 5px;
+}
+
+.extraInfo{
+    text-align: center;
+    font-family: 'Amiri', serif;
+    color: rgb(190, 66, 190);
+    font-weight: bold;
+}

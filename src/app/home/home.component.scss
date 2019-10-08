@@ -24,6 +24,7 @@ img{
     padding: 0;
 }
 
+
 #slider{
     margin: auto;
     padding: auto;
@@ -39,13 +40,52 @@ img{
     color: rgb(93, 42, 97);
 }
 
-.btn-slider{
+#slider-title:hover{
+    .right-img{
+        transition-duration: .8s;
+        -webkit-transform:rotate(70deg) scaleY(-1);
+        -moz-transform: rotate(70deg) scaleY(-1);
+        -ms-transform: rotate(70deg) scaleY(-1);
+        -o-transform: rotate(70deg) scaleY(-1);
+        transform: rotate(70deg) scaleY(-1);
+    }
+    .left-img{
+        transition-duration: .8s;
+        -webkit-transform:rotate(-290deg) scaleX(-1);
+        -moz-transform: rotate(-290deg) scaleX(-1);
+        -ms-transform: rotate(-290deg) scaleX(-1);
+        -o-transform: rotate(-290deg) scaleX(-1);
+        transform: rotate(-290deg) scaleX(-1);
+    }
+}
+
+.btn-slider-green{
     border: solid 2px #28a745;
     color: #28a745 !important;
 }
 
-.btn-slider:hover{
+.btn-slider-green:hover{
     color: aliceblue !important;
+}
+
+.btn-slider-purple{
+    border: solid 2px #126cd3;
+    color: #126cd3 !important;
+}
+
+.btn-slider-purple:hover{
+    color: aliceblue !important;
+    background: #126cd3;
+}
+
+.btn-slider-white{
+    border: solid 2px #eeeeee;
+    color: #eeeeee !important;
+}
+
+.btn-slider-white:hover{
+    color: rgb(6, 44, 77) !important;
+    background: #eeeeee;
 }
 
 .title-caption-slider{
