@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FaqComponent } from './faq/faq.component';
 import { NavComponent } from './nav/nav.component';
 import { InformaitionService } from './informaition.service';
+import { FaqDocService } from './faq-doc.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { InformaitionService } from './informaition.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [InformaitionService],
+  providers: [InformaitionService,FaqDocService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

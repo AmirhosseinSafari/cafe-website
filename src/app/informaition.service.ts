@@ -17,8 +17,8 @@ export class InformaitionService {
   }
 
   
-  public set setCafesInfo(v : CafeInfo[]) {
-    this.cafesInfo = v;
-  }
+  // public set setCafesInfo(v : CafeInfo[]) {
+  //   this.cafesInfo = v;
+  // }
   
 }

@@ -1,6 +1,6 @@
 <div class="container-fluid padding">
     <div class="row padding" *ngIf="info.getCafeInfo">
-        <div class="col-6 cafe-info-card" *ngFor="let item of info.getCafeInfo">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 cafe-info-card" *ngFor="let item of info.getCafeInfo">
             <div class="card">
                 <img class="card-img-top" [src]="item.imgOfCafe" alt="image of cafe">
                 <div class="card-body">

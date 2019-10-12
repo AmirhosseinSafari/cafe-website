@@ -1,1 +1,66 @@
-<p>faq works!</p>
+<div class="container-fluid padding">
+        <div class="row padding main-div" *ngIf="post.getPostInfo">
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 cafe-info-card" *ngFor="let item of post.getPostInfo">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="avatar-div">
+                            <i class="fas fa-user avatar"></i>
+                        </div>
+                        <h4 class="card-title name">{{item.name}}</h4>
+                        <h5 class="card-subtitle location">{{item.location}}</h5>
+                        <h5 class="card-subtitle cafeUsed">{{item.cafeUsed}}</h5>
+                        <p class="card-text textOfPost">{{item.textOfPost}}</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <h5 *ngIf="success">!نظر شما با موفقیت ثبت شد</h5>
+
+            <div>
+                <h4> : نام</h4>
+                <input type="text">
+                <div *ngIf="submitted" class="error">
+                    <div>
+                        !لطفا نام خود را وارد کنید
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+<!--  -->
+<!-- 
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <h5 *ngIf="succsess">
+            Your form is valid!
+        </h5>
+    
+        <label>
+            <h4>Name: </h4>
+            <input type="text" formControlName="name">
+            <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+                <div *ngIf="messageForm.controls.name.errors.required">
+                    Your name is required!
+                </div>
+            </div>
+        </label>
+    
+        <label>
+            message: 
+            <textarea type="text" formControlName="message"></textarea>
+            <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+                <div *ngIf="messageForm.controls.message.errors.required">
+                    A message is required!
+                </div>
+            </div>
+        </label>
+    
+        <input type="submit" value="Send message" class="cta">
+    
+    </form> -->
