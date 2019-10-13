@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FaqDocService } from '../faq-doc.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Posts } from '../model.cafe.posts';
 
 @Component({
   selector: 'app-faq',
@@ -30,6 +31,13 @@ export class FaqComponent implements OnInit {
      }
     
     this.succsess = true;
+
+    var newPost : Posts =
+    {name:this.messageForm.controls['name'].value 
+    , location:this.messageForm.controls['place'].value
+    , textOfPost: this.messageForm.controls['post'].value
+    , cafeUsed: this.messageForm.controls['cafe'].value};
+    this.post.insertingItemToArray(newPost);
   }
 
 

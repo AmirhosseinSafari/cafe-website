@@ -18,4 +18,8 @@ export class FaqDocService {
   get getPostInfo(){
     return this.post;
   }
+
+  public insertingItemToArray(item : Posts){
+    this.post.splice(0,0,item);
+  }
 }
