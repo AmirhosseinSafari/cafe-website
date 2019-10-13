@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amiri&display=swap');
 
 .main-div{
-    background: url("https://qph.fs.quoracdn.net/main-qimg-df6ac760e307c77f4044d523ca1c0278");
+    background: url("https://wpamelia.com/wp-content/uploads/2019/02/4k-wallpaper-architecture-background-1308624.jpg");
 }
 
 .cafe-info-card{
@@ -62,46 +62,87 @@
 // qqq
 
 label{
-    display: block;
-    
-    input,textarea{
-        display: block;
-        width: 50%;
-        margin-top: 20px;
-        padding: 1em;
-    }
-
-    .error{
-        margin-top: -20px;
-        background: yellow;
-        padding: .5em;
-        display: inline-block;
-        font-size: .9em;
-        margin-bottom: 20px;
-    }
+     input,textarea{
+         display: block;
+         width: 90%;
+         margin-top: 20px;
+         padding: 1em;
 }
 
-.cta{
-    background: #7700ff;
-    border: none;
-    color: white;
+     .error{
+         margin-top: -20px;
+         background: yellow;
+         padding: .5em;
+         display: inline-block;
+         font-size: .9em;
+         margin-bottom: 20px;
+         color: rgb(52, 59, 77);
+        }
+ }
 
-    text-transform: uppercase;
-    border-radius: 4px;
-    padding: 1em;
-    cursor:pointer;
-    font-family: 'Motserrat';
+ .cta{
+    background: #7b23e0;
+     border: none;
+     color: white;
+     border-radius: 4px;
+     padding:1em 3em;
+     cursor:pointer;
+     font-family: 'Amiri';
+ }
+
+ .cta:hover{
+     transition: .5s;
+     transform: scale(1.09);
+ }
+
+.form{
+     background-image: url("https://wpamelia.com/wp-content/uploads/2019/02/4k-wallpaper-architecture-background-1308624.jpg");
+     padding: 5px;
+     text-align: center;
+     font-family: 'Amiri' , serif;
+     color: rgb(230, 207, 207);
+     text-shadow: 2px 2px 3px rgb(203, 97, 212);
+     font-size: 20px;
+     font-weight: bold;
+}
+
+.lbl-form{
+     text-align: -webkit-center;
+     border-radius: 5px;
+
 }
 
 .results{
-    margin-top: 50px;
+    margin-top: 20px;
+}
 
-    strong{
-        display: block;
-    }
+.result-form{
+     text-align: center;
+     font-family: 'Amiri' , serif;
+     color: rgb(218, 218, 255);
+     text-shadow: 2px 2px 3px rgb(122, 76, 228);
+     height: 8%;
+     margin:0 10%;
+     margin-bottom: 10%;
+     font-size: 20px;
+}
 
-    span{
-        margin-bottom: 20px;
-        display: block;
-    }
+.result-form-span{
+     height: 5%;
+     margin: 10%;
+     text-align: center;
+}
+
+.col-12{
+    text-align: -webkit-center;
+}
+
+.success-part{
+    margin: 5%;
+    display: block;
+}
+
+.s-part{
+    text-align: center !important;
+    display: block;
 }

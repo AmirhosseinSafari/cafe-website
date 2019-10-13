@@ -10,6 +10,7 @@ import { FaqComponent } from './faq/faq.component';
 import { NavComponent } from './nav/nav.component';
 import { InformaitionService } from './informaition.service';
 import { FaqDocService } from './faq-doc.service';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FaqDocService } from './faq-doc.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [InformaitionService,FaqDocService],
   bootstrap: [AppComponent]

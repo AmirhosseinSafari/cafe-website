@@ -1,66 +1,126 @@
 <div class="container-fluid padding">
-        <div class="row padding main-div" *ngIf="post.getPostInfo">
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 cafe-info-card" *ngFor="let item of post.getPostInfo">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="avatar-div">
-                            <i class="fas fa-user avatar"></i>
-                        </div>
-                        <h4 class="card-title name">{{item.name}}</h4>
-                        <h5 class="card-subtitle location">{{item.location}}</h5>
-                        <h5 class="card-subtitle cafeUsed">{{item.cafeUsed}}</h5>
-                        <p class="card-text textOfPost">{{item.textOfPost}}</p>
+    <div class="row padding main-div" *ngIf="post.getPostInfo">
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 cafe-info-card" *ngFor="let item of post.getPostInfo">
+            <div class="card">
+                <div class="card-body">
+                    <div class="avatar-div">
+                        <i class="fas fa-user avatar"></i>
                     </div>
+                    <h4 class="card-title name">{{item.name}}</h4>
+                    <h5 class="card-subtitle location">{{item.location}}</h5>
+                    <h5 class="card-subtitle cafeUsed">{{item.cafeUsed}}</h5>
+                    <p class="card-text textOfPost">{{item.textOfPost}}</p>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="container-fluid padding">
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()" class="form">
+
+    <div class="container-fluid">
+
+        <hr class="my-4">
+
         <div class="row padding">
-            <h5 *ngIf="success">!نظر شما با موفقیت ثبت شد</h5>
+            <div class="col-12">
+                <label class="lbl-form col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <p>:نام</p>
+                    <input type="text" formControlName="name" class="text-area">
+                    <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+                        <div *ngIf="messageForm.controls.name.errors.required">
+                            !لطفا نام خود را وارد کنید
+                        </div>
+                    </div>
+                </label>
 
-            <div>
-                <h4> : نام</h4>
-                <input type="text">
-                <div *ngIf="submitted" class="error">
-                    <div>
-                        !لطفا نام خود را وارد کنید
+                <div class="results col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="result-form">
+                        <strong>:نام</strong>
+                        <div class="result-form-span">{{ messageForm.controls.name.value }}</div>
                     </div>
                 </div>
             </div>
-
-            
         </div>
-    </div>
 
-<!--  -->
-<!-- 
-<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
-        <h5 *ngIf="succsess">
-            Your form is valid!
-        </h5>
-    
-        <label>
-            <h4>Name: </h4>
-            <input type="text" formControlName="name">
-            <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
-                <div *ngIf="messageForm.controls.name.errors.required">
-                    Your name is required!
+        <hr class="my-4">
+
+        <div class="row padding">
+            <div class="col-12">
+                <label class="lbl-form col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    : محل سکونت
+                    <textarea type="text" formControlName="place" class="text-area"></textarea>
+                    <div *ngIf="submitted && messageForm.controls.place.errors" class="error">
+                        <div *ngIf="messageForm.controls.place.errors.required">
+                            !لطفا محل سکونت خود را وارد کنید
+                        </div>
+                    </div>
+                </label>
+
+                <div class="results col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="result-form">
+                        <strong>: محل سکونت </strong>
+                        <div class="result-form-span">{{ messageForm.controls.place.value }}</div>
+                    </div>
                 </div>
             </div>
-        </label>
-    
-        <label>
-            message: 
-            <textarea type="text" formControlName="message"></textarea>
-            <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
-                <div *ngIf="messageForm.controls.message.errors.required">
-                    A message is required!
+        </div>
+
+        <hr class="my-4">
+
+        <div class="row padding">
+            <div class="col-12">
+                <label class="lbl-form col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    : کافه ی مورد نظر
+                    <textarea type="text" formControlName="cafe" class="text-area"></textarea>
+                    <div *ngIf="submitted && messageForm.controls.cafe.errors" class="error">
+                        <div *ngIf="messageForm.controls.cafe.errors.required">
+                            !لطفا نام کافه را وارد کنید
+                        </div>
+                    </div>
+                </label>
+
+                <div class="results col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="result-form">
+                        <strong>: کافه ی مورد نظر</strong>
+                        <div class="result-form-span">{{ messageForm.controls.cafe.value }}</div>
+                    </div>
                 </div>
             </div>
-        </label>
-    
-        <input type="submit" value="Send message" class="cta">
-    
-    </form> -->
+        </div>
+
+        <hr class="my-4">
+
+        <div class="row padding">
+            <div class="col-12">
+                <label class="lbl-form col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    : نظر درباره ی کافه
+                    <textarea type="text" formControlName="post" class="text-area"></textarea>
+                    <div *ngIf="submitted && messageForm.controls.post.errors" class="error">
+                        <div *ngIf="messageForm.controls.post.errors.required">
+                            !لطفا نظر خود را وارد کنید
+                        </div>
+                    </div>
+                </label>
+
+                <div class="results col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="result-form">
+                        <strong>: نظر درباره ی کافه</strong>
+                        <div class="result-form-span">{{ messageForm.controls.post.value }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="ارسال" class="cta">
+
+        <div class="row padding s-part">
+            <h5 *ngIf="succsess" class="success-part">
+                !نظر شما با موفقیت ثبت شد
+            </h5>
+
+        </div>
+
+    </div>
+</form>
